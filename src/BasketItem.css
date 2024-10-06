@@ -1,0 +1,12 @@
+.basket__item{
+    display: flex;
+    margin-top: 10px;
+}
+.basket__item__left{
+    width: 150px;
+    margin: 20px;
+}
+.basket__item__left > img{
+    width: 100%;
+   
+}
