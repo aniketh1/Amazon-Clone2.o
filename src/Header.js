@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Header.css'
 
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import { useStateValue } from './StateProvider';
-function Header() {
-  const [{basket}, dispatch] = useStateValue();
 
+import { useStateValue } from './StateProvider';
+import { Link } from 'react-router-dom';
+import { auth } from './firebase';
+function Header() {
+  const [username,setUsername] = useState('')
+  const [{basket, user}, dispatch] = useStateValue();
+  useEffect(() => {
+    if (user && user.email) {
+      const extractedUsername = user.email.split('@')[0]; // Extract username from email
+      setUsername(extractedUsername);
+    } else {
+      setUsername(''); // Reset if user is not logged in
+    }
+  }, [user]);
+  const handleAuthentication = () =>{
+    if (user){
+      auth.signOut();
+    }
+  }
   return (
     <div className='header'>
       <Link to="/">
@@ -26,10 +41,10 @@ function Header() {
       </div>
 
       <div className='header__nav'>
-        <Link to="/login">
-        <div className='header__option'>
-          <span className='header__optionLineOne'>Hello guest</span>
-          <span className='header__optionLineTwo'>Sign In</span>
+        <Link to={!user && "/login"}>
+        <div className='header__option' onClick={handleAuthentication}>
+          <span className='header__optionLineOne'>Hello {username ? username : "Guest"}</span>
+          <span className='header__optionLineTwo'>{user ? "Sign Out" : "Sign In"}</span>
         </div>
         </Link>
         <div className='header__option'>
