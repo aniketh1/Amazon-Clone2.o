@@ -10,6 +10,11 @@ module.exports = {
     "eslint:recommended",
     "google",
   ],
+  settings: {
+    react: {
+      version: "detect", // Automatically picks the version you have installed.
+    },
+  },
   rules: {
     "no-restricted-globals": ["error", "name", "length"],
     "prefer-arrow-callback": "error",

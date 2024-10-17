@@ -7,6 +7,8 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from './reducer';
 import axios from './axios';
+import {db} from "./firebase"
+import { doc, collection, setDoc } from 'firebase/firestore'; // Import necessary functions from Firestore
 
 function Payment() {
     const [{basket,user},dispatch] = useStateValue();
@@ -46,13 +48,26 @@ function Payment() {
           payment_method:{
             card: elements.getElement(CardElement)
           }
-        }).then(({paymentIntent}) => {
+        }).then(async({paymentIntent}) => {
           // paymentIntent = payment confirmation
+          const userDocRef = doc(db, 'users', user?.uid);
+        
+          // Reference to the orders collection within the user document
+          const orderDocRef = doc(collection(userDocRef, 'orders'), paymentIntent.id);
+          
+          // Save the order details to Firestore
+          await setDoc(orderDocRef, {
+              basket: basket,
+              amount: paymentIntent.amount,
+              created: paymentIntent.created
+          });
 
           setSucceeded(true);
           setError(null);
           setProcessing(false);
-
+          dispatch({
+            type: 'EMPTY_BASKET'
+          })
           navigate('/orders')
         })
 

@@ -10,7 +10,7 @@ import {Elements} from "@stripe/react-stripe-js"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { auth } from './firebase'
 import { useStateValue } from "./StateProvider";
-
+import Orders from "./Orders"
 const promise = loadStripe("pk_test_51Q9oJGRqxwzhN6aWUfjlnziQfvz3G32fbKCF5n7TR0P2a3yeBtFt3NzgKwFIG4HRoQQ4e6HamG6dORPc3PrJamak00YrxX1KsB");
 
 
@@ -65,7 +65,15 @@ function App() {
               </>
             }
           />
-
+          {/* Orders Route */}
+          <Route exact path="/orders"
+          element={
+            <>
+            <Header/>
+            <Orders/>
+            </>
+          }
+          />
           {/* Home Route */}
           <Route
             path="/"
