@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Amazon Clone Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Amazon Logo](https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg)
 
-## Available Scripts
+## Overview
+This project is a clone of the Amazon e-commerce platform, built using modern web technologies. The application features user authentication, a product palette, cart functionality, and payment gateways.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Technology        | Logo                                                                                           | Percentage Used |
+|-------------------|------------------------------------------------------------------------------------------------|-----------------|
+| React             | ![React](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)                 | 30%             |
+| Redux             | ![Redux](https://upload.wikimedia.org/wikipedia/commons/9/9c/Redux_Logo.png)                | 20%             |
+| Node.js           | ![Node.js](https://nodejs.org/static/images/logo-light.svg)                                   | 25%             |
+| Express           | ![Express](https://expressjs.com/images/express-facebook-share.png)                          | 10%             |
+| MongoDB           | ![MongoDB](https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg)                       | 15%             |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
+- User Authentication
+- Product Listings
+- Shopping Cart
+- Payment Integration
+- Responsive Design
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js
+- MongoDB
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/aniketh1/Amazon-Clone2.o.git
+   cd amazon-clone
+2. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bash
 
-### `npm run eject`
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Start the application:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Usage
 
-## Learn More
+    Navigate to http://localhost:3000 in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License - see the LICENSE file for details.
+Contributing
 
-### Code Splitting
+Contributions are welcome! Please open an issue or submit a pull request.
+Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Aniket Korwar
+[LinkedIn](https://www.linkedin.com/in/aniket-korwar-064550203/) | [GitHub](https://github.com/aniketh1)
